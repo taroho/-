@@ -1,0 +1,56 @@
+
+    // お気に入りの設定
+    "window.restoreWindows": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.restoreUndoStack": false,
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.autohide": "scroll",
+    "vim.hlsearch": true,
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\ryutaro.yamashita\\tools\\zenhan.exe 0",
+    "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Users\\ryutaro.yamashita\\tools\\zenhan.exe {im}",
+    "vim.autoSwitchInputMethod.defaultIM": "0",
+    "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "Horizon Bright Bold",
+    "workbench.colorCustomizations": { 
+        "[Horizon Bright Bold]": {
+            // 線 #e2d4cf
+            // ちょい濃い #f9eae5
+            "minimap.selectionHighlight":"#af542780",//設定されていなかったので、エディタの選択範囲色と同色
+            "minimapSlider.background":"#ea795d40",
+            "scrollbarSlider.background": "#ea795d40",
+            "editorGroupHeader.tabsBorder": "#e2d4cf",
+            "editorGroupHeader.tabsBackground": "#f9eae5",
+            "sideBar.background" : "#f9eae5",
+            "sideBar.border": "#e2d4cf",
+            "panel.background" : "#f9eae5",
+            "statusBar.background": "#f9eae5",
+            "statusBar.border": "#e2d4cf",
+            "statusBarItem.remoteBackground": "#f9eae5",
+            "activityBar.background": "#f9eae5",
+            "tab.border": "#e2d4cf",
+            "tab.activeBorder":"#f9eae5",
+            "tab.inactiveBackground": "#f9eae5",
+            "titleBar.activeBackground": "#f9eae5",
+            "titleBar.border": "#e2d4cf",
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Horizon Bright Bold]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "string.quoted.docstring.multi.python",
+                    ],
+                    "settings": {
+                        "foreground": "#33333380",
+                        "fontStyle": "italic"
+                    }
+                }
+            ]
+        }
+    },
+
