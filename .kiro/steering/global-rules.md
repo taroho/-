@@ -26,6 +26,7 @@ inclusion: always
 - 変更後は影響範囲を説明する
 - コメントを詳細に記載する
 - kiro spec formatに必ず従う
+- 修正時は必ずrequirements.md、design.md、tasks.mdを修正してから作業を行う
 
 ## React
 - TypeScriptを使用する
