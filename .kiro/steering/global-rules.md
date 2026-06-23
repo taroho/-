@@ -6,6 +6,7 @@ inclusion: always
 
 - Steeringルールに違反するリクエストがあった場合、必ず確認する
 - すべてのドキュメントが Kiro Spec Format に必ず従ってください。
+- ドキュメント作成後にKiro Spec Format に従っていることを必ず確認してください
 
 ## Git
 - git commit を実行しない
