@@ -5,6 +5,7 @@ inclusion: always
 # Global Rules
 
 - Steeringルールに違反するリクエストがあった場合、必ず確認する
+- すべてのドキュメントが Kiro Spec Format に必ず従ってください。
 
 ## Git
 - git commit を実行しない
