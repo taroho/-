@@ -30,3 +30,4 @@ build/
 .kiro/
 docs/
 *.code-workspace
+.kiroignore
