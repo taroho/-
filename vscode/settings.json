@@ -2,11 +2,10 @@
     "window.restoreWindows": "none",
     "diffEditor.ignoreTrimWhitespace": false,
     "files.restoreUndoStack": false,
-    "breadcrumbs.enabled": false,
     "editor.stickyScroll.enabled": false,
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "all",
     "editor.minimap.showSlider": "always",
-    "editor.minimap.autohide": "scroll",
+    "editor.minimap.autohide": "mouseover",
     "vim.hlsearch": true,
     "vim.autoSwitchInputMethod.enable": true,
     "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\{path}\\zenhan.exe 0",
@@ -35,6 +34,10 @@
             "tab.inactiveBackground": "#f9eae5",
             "titleBar.activeBackground": "#f9eae5",
             "titleBar.border": "#e2d4cf",
+            "list.inactiveFocusOutline": "#b7998e" ,
+            "editorWhitespace.foreground": "#ea795d40",
+            // kiroではtask.mdの- [ ]* のタスクが視認性悪いので目立つ色に設定
+            "editorCodeLens.foreground": "#33333380",
         }
     },
     "editor.tokenColorCustomizations": {
@@ -52,4 +55,5 @@
             ]
         }
     },
+    "security.workspace.trust.untrustedFiles": "open",
 
