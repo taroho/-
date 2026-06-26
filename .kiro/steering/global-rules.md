@@ -41,41 +41,35 @@ inclusion: always
 
 ### 分割ルール
 
-requirements.md と design.md は必ず分割する。tasks.md は分割しない。
+design.md のみ分割する。requirements.md と tasks.md は分割しない。
 
 **構成:**
 - specフォルダ直下に `requirements.md`、`design.md`、`tasks.md` を配置する（Kiro が認識する基本ファイル）
-- 分割ファイルはサブフォルダに格納する
-- サブフォルダ名: `requirements/`、`designs/`
-- tasks.md はそのまま1ファイルで管理する
+- design.md の分割ファイルは `designs/` サブフォルダに格納する
+- requirements.md と tasks.md はそのまま1ファイルで管理する
 
-**おおもとファイルの書き方:**
+**おおもとファイル（design.md）の書き方:**
 - Kiro Spec Format のセクション見出し（`##`）はおおもとファイルに維持する
-- 各セクション見出しの下にKiro参照とMarkdownリンクを記述し、中身は分割ファイルに格納する
-- design.md の `## Overview` セクションは内容ごとおおもとファイルに維持し、分割しない
+- `## Overview` セクションは内容ごとおおもとファイルに維持し、分割しない
+- その他のセクション見出しの下にKiro参照とMarkdownリンクを記述し、中身は分割ファイルに格納する
 
 **分割粒度:**
-- requirements.md → Requirement（要件）ごとに分割
 - design.md → セクション（`##`）ごとに分割（Overview は除く）
 
 **命名規則:**
-- `requirements-<連番>-<内容>.md`（例: `requirements-1-login.md`）
 - `design-<連番>-<内容>.md`（例: `design-1-architecture.md`）
 
-**例: requirements.md のおおもとファイル:**
-```markdown
-# Requirements
-
-## Requirement 1: ログイン機能
-
-#[[file:.kiro/specs/my-feature/requirements/requirements-1-login.md]]
-- [ログイン機能](./requirements/requirements-1-login.md)
-
-## Requirement 2: ユーザープロフィール
-
-#[[file:.kiro/specs/my-feature/requirements/requirements-2-user-profile.md]]
-- [ユーザープロフィール](./requirements/requirements-2-user-profile.md)
-```
+**フォルダ構成例:**
+`
+.kiro/specs/my-feature/
+├── requirements.md
+├── design.md
+├── tasks.md
+└── designs/
+    ├── design-1-architecture.md
+    ├── design-2-data-models.md
+    └── design-3-api-endpoints.md
+`
 
 **例: design.md のおおもとファイル:**
 ```markdown
