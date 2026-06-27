@@ -38,6 +38,7 @@ inclusion: always
 - すべてのドキュメントは Kiro Spec Format に従う。ドキュメント作成・更新後は必ず形式を確認する
 - specファイルの内容は日本語で記述する。ただし、Kiro Spec Format が定める項目名（見出し・キー）は英語のままで可
 - specファイルを読む際は、おおもとファイル内のKiro参照（`#[[file:...]]`）やMarkdownリンク先のファイルもすべて読み込むこと。分割ファイルを含めた全体がspecの内容である
+- design.md を分割している場合、分割ファイル側で Kiro Spec Format の診断警告（例: 「Correctness Properties section has no properties」）が表示されることがあるが、これは無視してよい。おおもとファイル（design.md）が正しい形式であれば問題ない
 
 ### 分割ルール
 
