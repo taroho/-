@@ -29,5 +29,7 @@ build/
 # Kiro
 .kiro/
 docs/
+.docs/
+
 *.code-workspace
 .kiroignore
