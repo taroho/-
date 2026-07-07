@@ -31,6 +31,24 @@ inclusion: always
 
 - 変更後は影響範囲を明確に説明する
 
+## Skills と Steering の優先度
+
+### 基本原則
+
+1. **Skill が存在する場合は必ず確認する**
+   - ユーザーの指示より Skill が優先される
+   - Skill には、そのドメインの標準ルール・パターンが集約されている
+
+2. **Steering の確認順序**
+   - グローバル Steering（global-rule.md）
+   - ワークスペース Steering（structure.md, product.md, development-rules.md など）
+   - 該当する Skill（feature-test-skills など）
+   - その後、ユーザーのリクエストを処理
+
+3. **ユーザー指示との関係**
+   - ユーザーが「ファイルAで十分」と言った場合でも、Skill や Steering は確認する
+   - ユーザーの指示は「リポジトリ理解の情報源」の意味で、「ルール確認の省略」の意味ではない
+
 ## Specファイル
 
 ### 基本ルール
