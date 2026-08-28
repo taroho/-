@@ -56,66 +56,18 @@ inclusion: always
 - すべてのドキュメントは Kiro Spec Format に従う。ドキュメント作成・更新後は必ず形式を確認する
 - specファイルの内容は日本語で記述する。ただし、Kiro Spec Format が定める項目名（見出し・キー）は英語のままで可
 - specファイルを読む際は、おおもとファイル内のKiro参照（`#[[file:...]]`）やMarkdownリンク先のファイルもすべて読み込むこと。分割ファイルを含めた全体がspecの内容である
-- design.md を分割している場合、分割ファイル側で Kiro Spec Format の診断警告（例: 「Correctness Properties section has no properties」）が表示されることがあるが、これは無視してよい。おおもとファイル（design.md）が正しい形式であれば問題ない
 
-### 分割ルール
+### ファイル管理
 
-design.md のみ分割する。requirements.md と tasks.md は分割しない。
+- requirements.md、design.md、tasks.md はすべて分割せず、1ファイルで管理する
+- specフォルダ直下に `requirements.md`、`design.md`、`tasks.md` を配置する
 
-**構成:**
-- specフォルダ直下に `requirements.md`、`design.md`、`tasks.md` を配置する（Kiro が認識する基本ファイル）
-- design.md の分割ファイルは `designs/` サブフォルダに格納する
-- requirements.md と tasks.md はそのまま1ファイルで管理する
-
-**おおもとファイル（design.md）の書き方:**
-- Kiro Spec Format のセクション見出し（`##`）はおおもとファイルに維持する
-- `## Overview` セクションは内容ごとおおもとファイルに維持し、分割しない
-- その他のセクション見出しの下にKiro参照とMarkdownリンクを記述し、中身は分割ファイルに格納する
-
-**分割粒度:**
-- design.md → セクション（`##`）ごとに分割（Overview は除く）
-
-**命名規則:**
-- `design-<連番>-<内容>.md`（例: `design-1-architecture.md`）
-
-**UIレイアウト:**
-- UIを含むフィーチャーでは、design.md に `## UI Layout` セクションを追加し、分割ファイル `design-X-ui-layout.md` に詳細を記述する
-- UIレイアウトの内容: 画面構成、コンポーネント配置、視覚的フィードバック、エラー表示位置など
-
-**フォルダ構成例:**
-`
+**フォルダ構成:**
+```
 .kiro/specs/my-feature/
 ├── requirements.md
 ├── design.md
-├── tasks.md
-└── designs/
-    ├── design-1-architecture.md
-    ├── design-2-data-models.md
-    └── design-3-api-endpoints.md
-`
-
-**例: design.md のおおもとファイル:**
-```markdown
-# Design
-
-## Overview
-
-（Overview の内容はここに維持する）
-
-## Architecture
-
-#[[file:.kiro/specs/my-feature/designs/design-1-architecture.md]]
-- [アーキテクチャ](./designs/design-1-architecture.md)
-
-## Data Models
-
-#[[file:.kiro/specs/my-feature/designs/design-2-data-models.md]]
-- [データモデル](./designs/design-2-data-models.md)
-
-## API Endpoints
-
-#[[file:.kiro/specs/my-feature/designs/design-3-api-endpoints.md]]
-- [APIエンドポイント](./designs/design-3-api-endpoints.md)
+└── tasks.md
 ```
 
 ## Spec 命名規則
@@ -169,17 +121,6 @@ spec のフィーチャー名は以下のフォーマットに従う：
 - 親フェーズ内で一意であること
 - 修正specは親フェーズの完了後に作成する
 
-
 ## 一般
 
 - 回答・コメント・ドキュメントはすべて日本語で記述する
-
-## 技術スタック別ルール
-
-### React
-
-- TypeScript を必須で使用する
-
-### Laravel
-
-- ビジネスロジックは Service 層に配置し、Controller は薄く保つ（Fat Controller を避ける）
