@@ -1,0 +1,21 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "answer-complete-sound",
+      "trigger": "Stop",
+      "action": {
+        "type": "command",
+        "command": "bash /home/ryutaroyamashita/.kiro/hooks/scripts/notify-complete.sh"
+      }
+    },
+    {
+      "name": "permission-waiting-sound",
+      "trigger": "PermissionRequest",
+      "action": {
+        "type": "command",
+        "command": "bash /home/ryutaroyamashita/.kiro/hooks/scripts/notify-permission.sh"
+      }
+    }
+  ]
+}
